@@ -19,14 +19,14 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
         listAdapter.submitList(
             listOf(
-                User("first", "second", 100),
-                User("first", "second", 100),
-                User("first", "second", 100),
-                User("first", "second", 100),
-                User("first", "second", 100),
-                User("first", "second", 100),
-                User("first", "second", 100),
-                User("first", "second", 100)
+                User("あいざわ", "かずき", 29),
+                User("ふじくら", "まさひろ", 52),
+                User("よしずみ", "ひろゆき", 54),
+                User("ほりのうち", "しんいち", 40),
+                User("はすぬま", "よしろう", 37),
+                User("はなわ", "のぶお", 38),
+                User("おじま", "おじま", 31),
+                User("しんざき", "くにひと", 35)
             )
         )
     }

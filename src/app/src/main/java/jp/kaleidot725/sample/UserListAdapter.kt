@@ -18,6 +18,7 @@ class UserItemViewHolder(
 }
 
 class UserListAdapter : ListAdapter<User, UserItemViewHolder>(DIFF_UTIL_ITEM_CALLBACK) {
+
     override fun onBindViewHolder(holderUser: UserItemViewHolder, position: Int) {
         holderUser.bind(getItem(position))
     }
