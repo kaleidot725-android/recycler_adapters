@@ -23,7 +23,7 @@ class UserItemViewHolder(
 /**
  * User の差分確認する
  */
-val DIFF_UTIL_ITEM_CALLBACK = object : DiffUtil.ItemCallback<User>() {
+val DIFF_UTIL_USER_ITEM_CALLBACK = object : DiffUtil.ItemCallback<User>() {
     // 渡されたデータが同じ値であるか確認をする
     override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
         return oldItem == newItem
@@ -43,7 +43,7 @@ val DIFF_UTIL_ITEM_CALLBACK = object : DiffUtil.ItemCallback<User>() {
  * - B:RecyclerView.ViewHolder には表示する View を保持する ViewHolder をセットする
  * - C:DiffUtils.ItemCallback<A> には A:Object の差分確認方法を実装した ItemCallback をセットする
  */
-class UserListAdapter : ListAdapter<User, UserItemViewHolder>(DIFF_UTIL_ITEM_CALLBACK) {
+class UserListAdapter : ListAdapter<User, UserItemViewHolder>(DIFF_UTIL_USER_ITEM_CALLBACK) {
     // ここで View を生成する、生成した View は ViewHolder に格納して、戻り値として返す
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserItemViewHolder {
         val view = LayoutUserItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
